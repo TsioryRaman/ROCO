@@ -6,10 +6,10 @@ mic = sr.Microphone()
 
 def recognition():
     with mic as source:
-        print("ici")
+        print("En train d'ecouter...")
         r.adjust_for_ambient_noise(source)
         audio = r.listen(source)
 
-        print("...")
+        print("reconaissance en cours ...")
 
         return r.recognize_google(audio, language='fr-FR')
